@@ -8,48 +8,52 @@ const Categories: React.FC = () => {
     {
       id: 'trivia',
       title: 'General Trivia',
-      description: 'Test your knowledge on a variety of general topics.',
-      icon: <Brain size={24} />
+      description: 'Test your knowledge on a variety of fascinating topics.',
+      icon: <Brain size={24} className="text-quizflow-teal" />
     },
     {
       id: 'education',
-      title: 'Educational',
-      description: 'Learn while you play with academic-focused quizzes.',
-      icon: <GraduationCap size={24} />
+      title: 'Educational Journey',
+      description: 'Enrich your mind with academic-focused quizzes.',
+      icon: <GraduationCap size={24} className="text-quizflow-teal" />
     },
     {
       id: 'fun',
       title: 'Just for Fun',
-      description: 'Quick brain teasers for all ages and interests.',
-      icon: <Sparkles size={24} />
+      description: 'Delightful brain teasers for all ages and interests.',
+      icon: <Sparkles size={24} className="text-quizflow-teal" />
     },
     {
       id: 'geography',
-      title: 'Geography',
-      description: 'Explore the world with map and location-based quizzes.',
-      icon: <Globe size={24} />
+      title: 'World Explorations',
+      description: 'Embark on a global adventure with location-based quizzes.',
+      icon: <Globe size={24} className="text-quizflow-teal" />
     },
     {
       id: 'technology',
-      title: 'Technology',
-      description: 'From coding to gadgets - test your tech knowledge.',
-      icon: <Code size={24} />
+      title: 'Digital Frontiers',
+      description: 'Navigate the digital landscape from coding to cutting-edge tech.',
+      icon: <Code size={24} className="text-quizflow-teal" />
     },
     {
       id: 'science',
-      title: 'Science',
-      description: 'Discover the wonders of science with these quizzes.',
-      icon: <Atom size={24} />
+      title: 'Scientific Wonders',
+      description: 'Unravel the mysteries of science with captivating quizzes.',
+      icon: <Atom size={24} className="text-quizflow-teal" />
     }
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-10 text-center">Explore Quiz Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} {...category} />
+        <h2 className="text-3xl font-bold mb-3 text-center font-playfair">Explore Quiz Categories</h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Discover curated collections of quizzes designed to delight, challenge, and inspire your curiosity.</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <div key={category.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <CategoryCard {...category} />
+            </div>
           ))}
         </div>
       </div>

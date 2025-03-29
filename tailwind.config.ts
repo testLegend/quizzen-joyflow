@@ -57,6 +57,9 @@ export default {
 				quizflow: {
 					teal: "#00A3AD",
 					orange: "#F4A261",
+					gold: "#FFD700",
+					blush: "#FFD1DC",
+					sage: "#A8D5BA",
 					gray: {
 						light: "#E8ECEF",
 						dark: "#333333"
@@ -81,6 +84,7 @@ export default {
 			fontFamily: {
 				sans: ['Open Sans', 'sans-serif'],
 				poppins: ['Poppins', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -119,15 +123,40 @@ export default {
 						opacity: '1'
 					}
 				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.3s ease-out',
-				'scale-in': 'scale-in 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
+				'slide-in': 'slide-in 0.4s ease-out',
+				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(to right, #E8ECEF, #D3E4FD)',
+				'hero-gradient': 'linear-gradient(to right, #F0F4F8, #A1C4FD)',
+			},
+			boxShadow: {
+				'glow-sm': '0 0 5px rgba(0, 163, 173, 0.3)',
+				'glow': '0 0 15px rgba(0, 163, 173, 0.5)',
+				'glow-lg': '0 0 25px rgba(0, 163, 173, 0.7)',
 			}
 		}
 	},
